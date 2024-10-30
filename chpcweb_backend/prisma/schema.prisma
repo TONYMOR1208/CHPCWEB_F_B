@@ -12,3 +12,23 @@ datasource db {
   provider = "postgresql"
   url      = env("DATABASE_URL")
 }
+
+
+// schema.prisma
+
+model Usuario {
+    id               Int       @id @default(autoincrement())
+    nombre           String
+    correo           String    @unique
+    contrasena       String
+    fecha_creacion   DateTime  @default(now())
+    ultimo_acceso    DateTime?
+    solicitudes      SolicitudRecuperacion[] @relation("SolicitudesPorUsuario")
+}
+
+model SolicitudRecuperacion {
+    id               Int       @id @default(autoincrement())
+    usuarioId       Int
+    fecha_solicitud  DateTime  @default(now())
+    usuario          Usuario   @relation("SolicitudesPorUsuario", fields: [usuarioId], references: [id])
+}
