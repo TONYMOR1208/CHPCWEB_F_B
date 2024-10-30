@@ -1,1 +1,69 @@
-<p>principal works!</p>
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Página Principal de Ventas</title>
+    <link rel="stylesheet" href="principal.component.css">
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="logo">
+            <a href="Principal.html">
+                <img src=" " alt="Logo de la Empresa">
+            </a>
+        </div>
+        <nav id="menu">
+            <ul>
+                <!-- Redirigen a las secciones del footer -->
+                <li><a href="#nosotros">Nosotros</a></li>
+                <li><a href="#contactenos">Contáctenos</a></li>
+                <li><a href="#">Marcas</a></li>
+                <li id="login"><a href="InicioSesion.html">Iniciar Sesión</a></li>
+                <li id="register"><a href="Registro.html">Registrarse</a></li>
+                <li id="cart" style="display: none;"><a href="cart.html">Carrito</a></li>
+                <li id="logout" style="display: none;"><a href="logout.html">Cerrar Sesión</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Barra de búsqueda -->
+    <section id="search-bar">
+        <input type="text" id="search-input" placeholder="Buscar productos...">
+    </section>
+
+    <!-- Productos -->
+    <main>
+        <div class="product-grid" id="product-grid">
+            <div class="product" data-product-id="1" data-product-name="Producto 1">
+                <img src="src/images/dell.png" alt="Producto 1">
+                <p><a href="producto.html?product=1"><button>VER PRODUCTO</button></a></p>
+                <span class="price">$100</span>
+            </div>
+            <div class="product" data-product-id="2" data-product-name="Producto 2">
+                <img src="images/asus.png" alt="Producto 2">
+                <p><a href="producto.html?product=2"><button>VER PRODUCTO</button></a></p>
+                <span class="price">$150</span>
+            </div> 
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <div id="nosotros">
+            <h3>Nosotros</h3>
+            <p>Somos una empresa dedicada a la venta de productos de alta calidad, con años de experiencia en el mercado.</p>
+        </div>
+        <div id="contactenos">
+            <h3>Contáctenos</h3>
+            <p>Email.com</p>
+            <p>Teléfono: 1234-5678</p>
+            <p>Dirección: Calle Falsa 123, Ciudad Ficticia</p>
+        </div>
+        
+    </footer>
+
+ 
+</body>
+</html>
